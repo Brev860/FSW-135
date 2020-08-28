@@ -1,13 +1,13 @@
 import React from 'react'
+import IssueList from './IssueList'
 
-const Issues = (props) => {
-  const { title, issue} = props
-  return (
-    <div className="todo">
-      <h1>{ title }</h1>
-      <h3>{ issue }</h3>
-    </div>
-  )
+const Issues = ()=>{
+
+    return(
+        <div>
+
+        </div>
+    )
 }
 
 export default Issues

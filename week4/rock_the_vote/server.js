@@ -2,9 +2,8 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
-require('dotenv').config
 
-process.env.SECRET
+
 
 app.use(express.json())
 app.use(morgan('dev'))
@@ -21,7 +20,6 @@ mongoose.connect(
     () => console.log('Connected to politics_db '))
  
 app.use('/auth', require('./routes/userRoutes'))
-app.use('/post', require('./routes/issuesRoutes'))
 
 app.use((err, req, res,next)=> {
     return res.send({errMsg: err.message})
